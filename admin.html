@@ -1,0 +1,198 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+
+		<link rel="stylesheet" type="text/css" href="css/onsenui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/onsen-css-components.min.css">
+		<script src="js/onsenui.min.js"></script>
+		
+		<title>Rewang Online Admin</title>
+
+	</script>
+	<style type="text/css">
+	.img{
+		background: #f5f5f5;
+	}
+	.corsel{
+		background: #4b0082;
+	}
+</style>
+</head>
+<body>
+	<ons-splitter>
+		<ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+		</ons-splitter-side>
+		<ons-splitter-content id="content" page="homeAkun.html"></ons-splitter-content>
+		<ons-splitter-content id="content" page="homeLaporan.html"></ons-splitter-content>
+		<ons-splitter-content id="content" page="homePetugas.html"></ons-splitter-content>
+		<ons-splitter-content id="content" page="homePesanan.html"></ons-splitter-content>
+	</ons-splitter>
+
+	<template id="homePesanan.html">
+		<ons-page>
+			<ons-toolbar>
+				<div class="right">
+					<ons-toolbar-button>
+						<img class="list-item__thumbnail" style="width: 35px; height: 35px; padding: 10px 0 0 0;" src="image/logo_rewo.jpg">
+					</ons-toolbar-button>
+				</div>
+				<div class="center">
+					Rewang Online
+				</div>
+			</ons-toolbar>
+			<ons-tabbar swipeable position="auto">
+				<div class="tabbar tabbar--top tabbar--top-border">
+					<ons-tab page="pesanan.html" label="Pesanan" icon="fa-shopping-basket" active></ons-tab>
+					<ons-tab page="petugas.html" label="Petugas" icon="fa-user"></ons-tab>
+					<ons-tab page="laporan.html" label="Laporan" icon="fa-list"></ons-tab>
+					<ons-tab page="akun.html" label="Akun" icon="fa-user"></ons-tab>
+				</div>
+			</ons-tabbar>
+		</ons-page>
+	</template>
+
+
+	<template id="homePetugas.html">
+		<ons-page>
+			<ons-toolbar>
+				<div class="right">
+					<ons-toolbar-button>
+						<img class="list-item__thumbnail" style="width: 35px; height: 35px; padding: 10px 0 0 0;" src="image/logo_rewo.jpg">
+					</ons-toolbar-button>
+				</div>
+				<div class="center">
+					Rewang Online
+				</div>
+			</ons-toolbar>
+			<ons-tabbar swipeable position="auto">
+				<div class="tabbar tabbar--top tabbar--top-border">
+					<ons-tab page="pesanan.html" label="Beranda" icon="fa-home" ></ons-tab>
+					<ons-tab page="petugas.html" label="Pesanan" icon="fa-shopping-basket" active></ons-tab>
+					<ons-tab page="laporan.html" label="Laporan" icon="fa-list" ></ons-tab>
+					<ons-tab page="akun.html" label="Akun" icon="fa-user"></ons-tab>
+				</div>
+			</ons-tabbar>
+		</ons-page>
+	</template>
+
+	<template id="homeLaporan.html">
+		<ons-page>
+			<ons-toolbar>
+				<div class="right">
+					<ons-toolbar-button>
+						<img class="list-item__thumbnail" style="width: 35px; height: 35px; padding: 10px 0 0 0;" src="image/logo_rewo.jpg">
+					</ons-toolbar-button>
+				</div>
+				<div class="center">
+					Rewang Online
+				</div>
+			</ons-toolbar>
+			<ons-tabbar swipeable position="auto">
+				<div class="tabbar tabbar--top tabbar--top-border">
+					<ons-tab page="pesanan.html" label="Pesanan" icon="fa-home" ></ons-tab>
+					<ons-tab page="petugas.html" label="Petugas" icon="fa-shopping-basket"></ons-tab>
+					<ons-tab page="laporan.html" label="Laporan" icon="fa-list" active></ons-tab>
+					<ons-tab page="akun.html" label="Akun" icon="fa-user"></ons-tab>
+				</div>
+			</ons-tabbar>
+		</ons-page>
+	</template>
+
+	<template id="homeAkun.html">
+		<ons-page>
+			<ons-toolbar>
+				<div class="right">
+					<ons-toolbar-button>
+						<img class="list-item__thumbnail" style="width: 35px; height: 35px; padding: 10px 0 0 0;" src="image/logo_rewo.jpg">
+					</ons-toolbar-button>
+				</div>
+				<div class="center">
+					Rewang Online
+				</div>
+			</ons-toolbar>
+			<ons-tabbar swipeable position="auto">
+				<div class="tabbar tabbar--top tabbar--top-border">
+					<ons-tab page="pesanan.html" label="Pesanan" icon="fa-home" ></ons-tab>
+					<ons-tab page="petugas.html" label="Petugas" icon="fa-shopping-basket"></ons-tab>
+					<ons-tab page="laporan.html" label="Laporan" icon="fa-list" ></ons-tab>
+					<ons-tab page="akun.html" label="Akun" icon="fa-user" active></ons-tab>
+				</div>
+			</ons-tabbar>
+		</ons-page>
+	</template>
+	<template id="pesanan.html">
+		<ons-page>
+				<form id="form_data">
+					<ons-card>
+					<p>
+						<ons-label>Pemesan</ons-label>
+						<ons-input id="pemesan" modifier="underbar" style="width: 100%"></ons-input>
+					</p>
+					<p>
+						<ons-input id="tanggal" modifier="underbar" type="date"  style="width: 100%"></ons-input>
+					</p>
+					<p>
+					<ons-select id="worker" style="width: 100%";>
+						<option value="">Pembayaran</option>
+						<option value="indo">Indomart </option>
+						<option value="alfa">Alfamart</option>
+						<option value="bri">BRI </option>
+						<option value="bni">BNI</option>
+					</ons-select>
+					</p>
+					<p>
+						<ons-button onclick="pesan()">Kirim</ons-button>
+					</p>
+				</ons-card>
+				</form> 
+				<hr/>
+				<ons-card>	
+				<h4>Data Pesanan</h4>
+				<table class="table">
+						<thead>
+							<tr>
+								<!-- <th>#</th> -->
+								<th>Pemesan</th>
+								<th>Tanggal</th>
+								<th>Petugas</th>
+								<th>Aksi</th>
+							</tr>
+
+						</thead>
+						<tbody id="list_pesan">
+
+						</tbody>
+					</table>
+				</ons-card>
+			</DIV>
+
+	</ons-page>
+</template>	
+<template id="petugas.html">
+	<ons-page>
+		<ons-toolbar>
+			<label>petugas</label>
+
+		</ons-toolbar>
+	</ons-page>
+</template>	
+<template id="laporan.html">
+	<ons-page>
+		<ons-toolbar>
+			<label>laporan</label>
+
+		</ons-toolbar>
+	</ons-page>
+</template>	
+<template id="akun.html">
+	<ons-page>
+		<ons-toolbar>
+			<label>akun</label>
+
+		</ons-toolbar>
+	</ons-page>
+</template>	
+
+<script src="js/mainadmin.js"></script>
+</body>
+</html>
